@@ -1,0 +1,236 @@
+/* CSS for Website background */
+body {
+    background: linear-gradient(270deg, #FF00BF, #0095ff);
+    background-size: 400% 400%;
+    animation: AnimationName 15s ease infinite;
+    color: white;
+    padding-top: 5%;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+section {
+    margin: 2%;
+}
+
+/* CSS for Webpage headings */
+h1 {
+    color:white;
+    font-size: 25pt;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 1px 1px #000000;
+}
+
+h3 {
+    color: white;
+    font-size: 20pt;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 1px 1px #000000;
+}
+
+h5 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15pt;
+    text-shadow: 1px 1px #000000;
+}
+
+/* CSS styling for Home Page Elements*/
+.homepage {
+    text-align: center;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.homepage {
+    width: 400px;
+    height: 400px;
+}
+
+section img {
+    filter: drop-shadow(1px 1px black);
+}
+
+/* CSS for Navigation bar */
+ul {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+    background-color: red;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20pt;
+    text-decoration: none;
+    border-radius: 50%;
+    float: right;
+}
+
+li a:hover {
+    color:white;
+}
+
+li img {
+    float: left;
+    width: 300px;
+    height: 50px;
+    padding: 5px;
+    filter: drop-shadow(1px 1px black);
+}
+
+.active {
+    background-color: #14cc53;
+}
+
+/* CSS for Content */
+p {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15pt;
+    text-shadow: 1px 1px #000000;
+}
+
+p:first-letter {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    background: #CC0000;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+    text-shadow: 1px 1px #000000;
+}
+.table td, .table th{
+    border: none;
+    padding: 15px;
+}
+
+.table th {
+    border-bottom: 2px solid black;
+}
+
+dt{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15pt;
+    text-shadow: 1px 1px #000000;
+    vertical-align: text-bottom;
+}
+
+dt {
+    display: inline;
+}   
+
+
+
+
+/* Media Query for Smartphone Displays */
+@media (min-width : 320px) and (max-width: 600px) {
+    li img {
+        float: left;
+        width: 150px;
+        height: 30px;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 5px 10px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 10pt;
+        text-decoration: none;
+        border-radius: 50%;
+        float: right;
+    }
+
+    h1 {
+        font-size: 15pt;
+    }
+
+    h3 {
+        font-size: 12pt;
+    }
+
+    h5 {
+        font-size: 9pt;
+    }
+
+    p {
+        font-size: 8pt;
+    }
+
+    .homepage {
+        width: 85%;
+    }
+
+    img.homepage {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Media Query for Tablet Displays */
+@media (min-width: 601px) and (max-width: 1000px) {
+    li img {
+        float: left;
+        width: 180px;
+        height: 40px;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 5px 10px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15pt;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 2px;
+        float: right;
+    }
+
+    h1 {
+        font-size: 25pt;
+    }
+
+    h3 {
+        font-size: 12pt;
+    }
+
+    p {
+        font-size: 10pt;
+    }
+
+    #homepage {
+        width: 600px;
+    }
+}
+
+
+
+
+
+
+    
+    
