@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel = "stylesheet" href="./styles/CodingCyrus_stylesheet.css">
+        <link rel = "icon" href = "images/Title_Logo.png" type = "image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>CodingCyrus - Home</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!--Navigation Bar-->
+            <div class="navbar">
+                <img src = "images/CodingCyrusLogo.png" class= "logo" alt="CodingCyrusLogo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about_cyrus.html">ABOUT</a></li>
+                        <li><a href="projects_cyrus.html">PROJECTS</a></li>
+                        <li><a href="focus_cyrus.html" class="active">FOCUS</a></li>
+                        <li><a href="contact_cyrus.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <img src="images/green_menuIcon.png" class="menu-icon" onclick="togglemenu()" alt="Menu Icon">
+            </div>
+            
+            <!--Pomodoro Timer-->
+            <div id = "pomodoroApp" class="pomodoro">
+                <h1>{{name}}</h1>
+                <div id = "timer" class="timer">
+                    <span>{{minutes}}</span>
+                    <span>:</span>
+                    <span>{{seconds}}</span>
+                </div>
+
+                <!--Break Time-->
+                <div id="breakTimer" class="timer">
+                    <span>{{b_minutes}}</span>
+                    <span>:</span>
+                    <span>{{b_seconds}}</span>
+                </div>
+
+                <p>{{message}}</p>
+                <div id="timerButtons">
+                    <button id="start" @click="handleStart">FOCUS</button>
+                    <button id="break" @click="handleBreak">BREAK</button>
+                    <button id="stop" @click="handleStop" >STOP</button>
+                    <button id="reset" @click="handleReset">RESET</button>
+                </div>
+            </div>
+            
+            <!--Task To-Do List-->
+            <div id= "toDoApp">
+                <!-- Input -->
+                <div class="left">
+                  <h1>TO DO LIST</h1>
+                  <input v-model="task" type="text" placeholder="Enter Task" class="form-control">
+                  <button @click="submitTask">SUBMIT</button>
+                </div>
+            
+                <div>
+                  <span id="error"></span>
+                </div>
+            
+                <!-- Task table -->
+                <table class="table table-bordered mt-4">
+              <thead class="todo">
+                <tr>
+                  <th scope="col">To Do</th>
+                  <th scope="col">Progress Status</th>
+                  <th scope="col" class="text-center">Edit</th>
+                  <th scope="col" class="text-center">Delete</th>
+                </tr>
+              </thead>
+              <tbody class="todo">
+                <tr v-for="(task, index) in tasks" :key="index">
+                  <td>
+                    <span :class="{'finished': task.status === 'Complete'}"> {{task.name}} </span>
+                  </td>
+            
+                  <td>
+                    <span @click="changeStatus(index)" class= "pointer"
+                      :class="{'inProgress': task.status === 'IN PROGRESS',
+                      'notinProgress': task.status === 'NOT STARTED',
+                      'complete': task.status === 'COMPLETED',
+                      }">
+                      {{task.status}}
+                    </span>
+                  </td>
+            
+                  <td>
+                    <div class="text-center" @click="editTask(index)">
+                      <span class="fa fa-pencil"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-center" @click="deleteTask(index)">
+                    <span class="fa fa-trash"></span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+              </div>
+            </div>
+
+        <script src = "./scripts/vue.js"></script>
+        <script src = "./scripts/main.js"></script>        
+
+        <!--background art-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg1">
+            <path fill="#ffd700" fill-opacity="1" d="M0,256L15,240C30,224,60,192,90,149.3C120,107,150,53,180,48C210,43,240,85,270,90.7C300,96,330,64,360,80C390,96,420,160,450,181.3C480,203,510,181,540,192C570,203,600,245,630,240C660,235,690,181,720,154.7C750,128,780,128,810,106.7C840,85,870,43,900,32C930,21,960,43,990,85.3C1020,128,1050,192,1080,224C1110,256,1140,256,1170,245.3C1200,235,1230,213,1260,213.3C1290,213,1320,235,1350,250.7C1380,267,1410,277,1425,282.7L1440,288L1440,320L1425,320C1410,320,1380,320,1350,320C1320,320,1290,320,1260,320C1230,320,1200,320,1170,320C1140,320,1110,320,1080,320C1050,320,1020,320,990,320C960,320,930,320,900,320C870,320,840,320,810,320C780,320,750,320,720,320C690,320,660,320,630,320C600,320,570,320,540,320C510,320,480,320,450,320C420,320,390,320,360,320C330,320,300,320,270,320C240,320,210,320,180,320C150,320,120,320,90,320C60,320,30,320,15,320L0,320Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg2">
+            <path fill="#ff5500" fill-opacity="1" d="M0,256L15,240C30,224,60,192,90,149.3C120,107,150,53,180,48C210,43,240,85,270,90.7C300,96,330,64,360,80C390,96,420,160,450,181.3C480,203,510,181,540,192C570,203,600,245,630,240C660,235,690,181,720,154.7C750,128,780,128,810,106.7C840,85,870,43,900,32C930,21,960,43,990,85.3C1020,128,1050,192,1080,224C1110,256,1140,256,1170,245.3C1200,235,1230,213,1260,213.3C1290,213,1320,235,1350,250.7C1380,267,1410,277,1425,282.7L1440,288L1440,320L1425,320C1410,320,1380,320,1350,320C1320,320,1290,320,1260,320C1230,320,1200,320,1170,320C1140,320,1110,320,1080,320C1050,320,1020,320,990,320C960,320,930,320,900,320C870,320,840,320,810,320C780,320,750,320,720,320C690,320,660,320,630,320C600,320,570,320,540,320C510,320,480,320,450,320C420,320,390,320,360,320C330,320,300,320,270,320C240,320,210,320,180,320C150,320,120,320,90,320C60,320,30,320,15,320L0,320Z"></path>
+        </svg>            
+        
+        <!--footer-->
+        <footer class="footer">
+            <p>Copyright &copy; 2021 Cyrus Chun</p>
+        </footer>          
+
+  </body>
+</html>

@@ -3,19 +3,28 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>CodingCyrus - About Me</title>
-        <link rel = "stylesheet" href="CodingCyrus_stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel = "stylesheet" href="./styles/CodingCyrus_stylesheet.css">
+        <link rel = "icon" href = "images/Title_Logo.png" type = "image/x-icon">
+        <title>CodingCyrus - Home</title>
     </head>
 
     <body>
-        <header>
-            <ul>
-                <li><a href="contact_cyrus.html">CONTACT</a></li>
-                <li><a class = "active" href="about_cyrus.html">ABOUT</a></li>
-                <li><a href="home_cyrus.html">HOME</a></li>
-                <li style="float:left"><img src = "images/CodingCyrusLogo.png" alt="CodingCyrusLogo"></li>
-            </ul>
-            </header>
+        <div class="container">
+            <!--Navigation Bar-->
+            <div class="navbar">
+                <img src = "images/CodingCyrusLogo.png" class= "logo" alt="CodingCyrusLogo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about_cyrus.html"class="active">ABOUT</a></li>
+                        <li><a href="projects_cyrus.html">PROJECTS</a></li>
+                        <li><a href="focus_cyrus.html">FOCUS</a></li>
+                        <li><a href="contact_cyrus.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <img src="images/green_menuIcon.png" class="menu-icon" onclick="togglemenu()" alt="Menu Icon">
+            </div>
         
         <section>
             <h1>About Me</h1>
@@ -32,22 +41,39 @@
             Prior to Covid-19, Cyrus was a avid traveller having visited over +20 countries. But after enrolling in Boston University in Fall 2021, he likes to spend most of his time indoors exploring the world of the internet. 
         </section>
 
-        <section>
-            <h3>Favorite Activities</h3>
-            <dl>
-                <dt>Film Photography</dt>
-                <dd> <img src="images/FilmCamera_Cyrus.jpg" alt="Cyrus Canon AE-1"> </dd>
-                <dt>Motorcycle Touring</dt>
-                <dd> <img src="images/Bike_Cyrus.JPG" alt="Cyrus Motorcycle"> </dd>
-                <dt>Scuba Diving</dt>
-                <dd> <img src="images/Diving_Cyrus.JPG" alt="Cyrus Scub Diving Gear"> </dd>
-              </dl> 
-        </section>
+
+            <section class="no-touch">
+                <h3>Favorite Hobbies</h3>
+                <div class="wrap">
+                  
+                  <div class="box">
+                    <div class="boxInner">
+                        <img src="images/FilmCamera_Cyrus.jpg" alt="Cyrus Canon AE-1">
+                      <div class="titleBox">Film Photography</div>
+                    </div>
+                  </div>
+                  
+                  <div class="box">
+                    <div class="boxInner">
+                        <img src="images/Bike_Cyrus.JPG" alt="Cyrus Motorcycle">
+                      <div class="titleBox">Motorcycle Touring</div>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="boxInner">
+                        <img src="images/Diving_Cyrus.JPG" alt="Cyrus Scuba Diving Gear">
+                      <div class="titleBox">Scuba Diving</div>
+                    </div>
+                  </div> 
+
+                </div>
+            </section>
 
         <section id="courses">
-            <h3>Boston University MS in Software Development Program: Cyrus Chun</h3>
+            <h3>Boston University MS in Software Development Program</h3>
             <table class="table">
-                <thead>
+                <thead> 
                        <tr>
                           <th>Course Number</th>
                           <th>Term</th>
@@ -73,10 +99,27 @@
                     </tbody>
                     <tfoot>
                        <tr>
-                          <td class="center" colspan="3">Student academic progress as of November 2021</td>
+                          <td class="center" colspan="3">Academic Progress as of November 2021</td>
                        </tr>
                     </tfoot>
                 </table>
         </section>
-    </body>
+    </div>
+
+    <!--background art-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg1">
+        <path fill="#ffd700" fill-opacity="1" d="M0,256L15,240C30,224,60,192,90,149.3C120,107,150,53,180,48C210,43,240,85,270,90.7C300,96,330,64,360,80C390,96,420,160,450,181.3C480,203,510,181,540,192C570,203,600,245,630,240C660,235,690,181,720,154.7C750,128,780,128,810,106.7C840,85,870,43,900,32C930,21,960,43,990,85.3C1020,128,1050,192,1080,224C1110,256,1140,256,1170,245.3C1200,235,1230,213,1260,213.3C1290,213,1320,235,1350,250.7C1380,267,1410,277,1425,282.7L1440,288L1440,320L1425,320C1410,320,1380,320,1350,320C1320,320,1290,320,1260,320C1230,320,1200,320,1170,320C1140,320,1110,320,1080,320C1050,320,1020,320,990,320C960,320,930,320,900,320C870,320,840,320,810,320C780,320,750,320,720,320C690,320,660,320,630,320C600,320,570,320,540,320C510,320,480,320,450,320C420,320,390,320,360,320C330,320,300,320,270,320C240,320,210,320,180,320C150,320,120,320,90,320C60,320,30,320,15,320L0,320Z"></path>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg2">
+        <path fill="#ff5500" fill-opacity="1" d="M0,256L15,240C30,224,60,192,90,149.3C120,107,150,53,180,48C210,43,240,85,270,90.7C300,96,330,64,360,80C390,96,420,160,450,181.3C480,203,510,181,540,192C570,203,600,245,630,240C660,235,690,181,720,154.7C750,128,780,128,810,106.7C840,85,870,43,900,32C930,21,960,43,990,85.3C1020,128,1050,192,1080,224C1110,256,1140,256,1170,245.3C1200,235,1230,213,1260,213.3C1290,213,1320,235,1350,250.7C1380,267,1410,277,1425,282.7L1440,288L1440,320L1425,320C1410,320,1380,320,1350,320C1320,320,1290,320,1260,320C1230,320,1200,320,1170,320C1140,320,1110,320,1080,320C1050,320,1020,320,990,320C960,320,930,320,900,320C870,320,840,320,810,320C780,320,750,320,720,320C690,320,660,320,630,320C600,320,570,320,540,320C510,320,480,320,450,320C420,320,390,320,360,320C330,320,300,320,270,320C240,320,210,320,180,320C150,320,120,320,90,320C60,320,30,320,15,320L0,320Z"></path>
+    </svg>       
+
+    <!--footer-->
+    <footer class="footer">
+        <p>Copyright &copy; 2021 Cyrus Chun</p>
+    </footer>          
+
+    <script src = "./scripts/vue.js"></script>
+    <script src = "./scripts/main.js"></script>   
+    <script src = "./scripts/about.js"></script> 
 </html>

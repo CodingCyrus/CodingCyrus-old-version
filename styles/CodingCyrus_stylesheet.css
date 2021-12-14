@@ -1,0 +1,413 @@
+/* CSS for Website background and navbar*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Oswald', sans-serif;
+    background: linear-gradient(270deg, #30ff21, #02fff2);
+    background-size: 400% 400%;
+    animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.container {
+    width:100%;
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 150px;
+    margin: 20px 0;
+}
+
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 15px;
+}
+
+nav ul li a:hover{
+    color: white;
+    border-bottom: 5px solid yellow;
+    border-top: 5px solid yellow;
+    transition: all 0.6s ease;
+}
+
+.active {
+    border-bottom: 5px solid yellow;
+    border-top: 5px solid yellow;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 30px;
+}
+
+h1{
+    font-size: 180%;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.col-1 h3{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col-2 h4{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.col-1 p {
+    font-size: 15px;
+    font-weight: 100;
+    margin: 30px 0;
+}
+
+.col-2 {
+    position: static;
+    flex-basis: 40%;
+    margin-left: 0%;
+    float: right;
+}
+
+.col-2 h2{
+    border-style: solid;
+    border-color: white;
+}
+
+button{
+    width: 100px;
+    border: 0;
+    padding: 10px 10px;
+    outline: none;
+    background-color: #00c20a;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    position: static;
+    bottom: 0;
+    width:100%;
+    text-align: center;
+    height: 60px;
+    font-family:'Oswald', sans-serif;
+}
+
+/* CSS for HomePage */
+.homepage{
+    display: block; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+}
+
+.svg1{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    margin-top: -21%;
+}
+
+.svg2{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: rotate(180deg);
+}
+
+.fuji-image {
+    z-index: 0;
+    width: 30%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+/* CSS for About Page and Table layout*/
+.table {
+    width: 100%;
+    text-align: left;
+    background: #CC0000;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+}
+.table td, .table th{
+    border: none;
+    padding: 15px;
+}
+
+.table th {
+    border-bottom: 2px solid black;
+}
+
+dt{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15pt;
+    text-shadow: 1px 1px #000000;
+    vertical-align: text-bottom;
+}
+
+dt {
+    display: inline;
+}   
+
+.wrap {
+    overflow: hidden;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    float: left;
+    position: relative;
+    width: 20%;
+    padding-bottom: 20%;
+}
+
+.boxInner {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    overflow: hidden;
+}
+  
+.boxInner img {
+    width: 100%;
+    height: 100%;
+}
+  
+.boxInner .titleBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -50px;
+    background: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+  
+section.no-touch .boxInner:hover .titleBox, section.touch .boxInner.touchFocus .titleBox {
+    margin-bottom: 0;
+}
+
+/*CSS Projects*/
+.pdfdownload{
+    width: 100px;
+    border: 0;
+    padding: 10px 10px;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.pdfdownload:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/*CSS for focus page*/
+.pomodoro {
+    text-align: center;
+    font-weight: bold;
+}
+
+.timer {
+    font-size: 60px;
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+  }
+  
+.finished {
+    text-decoration: line-through;
+}
+  
+.inProgress {
+    text-align: center;
+    font-weight: bold;
+    background-color: yellow;
+}
+  
+.notinProgress {
+    text-align: center;
+    font-weight: bold;
+    background-color: red;
+}
+  
+.complete {
+    text-decoration-line: line-through;
+    text-align: center;
+    font-weight: bold;
+    background-color: #00c20a;
+}
+
+.todo{
+    background: white;
+    color: #000000;
+}
+
+.left {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/*CSS for contact page*/
+.sns{
+    width: 100px;
+    cursor: pointer;
+}
+.contact {
+    text-align: center;
+}
+
+
+/* Responsive layout - mobile tablet and desktop*/
+@media only screen and (max-width: 767px) {
+    nav ul {
+        width: 100%;
+        background: rgb(253, 174, 2);
+        position: absolute;
+        top: 80px;
+        right: 0;
+        z-index: 2;
+        margin-top: -20px;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 3px;
+    }
+    .menu-icon{
+        display: block;
+    }
+
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .fuji-image {
+        width: 50%;
+    }
+    .svg1{
+        display: none;
+    }
+    .svg2{
+        display: none;
+    }
+    .box {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    button{
+        width: 80px;
+        padding: 10px 20px;
+        background-color: #00c20a;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+}
+
+@media only screen and (min-width: 1024px) {
+    .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+      }
+}
