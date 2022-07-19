@@ -3,5 +3,5 @@
 
 ## About Me
 - 🇯🇵 🇰🇷 🇺🇸 currently in USA
-- Developer at [Qcera](https://leavesource.com/)
+- Developer at [Qcera](https://leavesource.com/) working on LeaveSource software and mobile app
 - Favorite Hobbies 🏋️‍Crossfit 🏃‍♂️Running 📷Film Photography 👨‍🍳Cooking
