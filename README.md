@@ -1,7 +1,8 @@
-# Hi, I'm Cyrus👋👨‍💻 
-### I'm a software developer currently pursuing a MS in Software Engineering at Boston University.
+# Outdated Web Portfolio from 2021
+https://codingcyrus.netlify.app/
 
-## About Me
-- 🇯🇵 🇰🇷 🇺🇸 currently in USA
-- Developer at [Qcera](https://leavesource.com/) working on LeaveSource software and mobile app
-- Favorite Hobbies 🏋️‍Crossfit 🏃‍♂️Running 📷Film Photography 👨‍🍳Cooking
+###Technology Used
+- Vue.js
+- Bootstrap
+- Netlify
+- Spotify API
